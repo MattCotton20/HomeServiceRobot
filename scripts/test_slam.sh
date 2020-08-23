@@ -10,12 +10,12 @@ xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_g
 sleep 5
 
 # Run mapping_demo.launch
-xterm  -e  "cd ${path_catkin_ws} && source devel/setup.bash && roslaunch turtlebot_gazebo gmapping_demo.launch" & 
+xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_gazebo gmapping_demo.launch" & 
 sleep 5
 
 # Run view_navigation.launch
-xterm  -e  "cd ${path_catkin_ws} && source devel/setup.bash && roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch" &
 sleep 5
 
 # Run keyboard_teleop.launch
-xterm  -e  "cd ${path_catkin_ws} && source devel/setup.bash && roslaunch turtlebot_teleop keyboard_teleop.launch" 
+xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_teleop keyboard_teleop.launch" 
