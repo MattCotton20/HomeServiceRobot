@@ -73,7 +73,7 @@ public:
       // Display marker at drop off position
       this->SetMarkerPosition(5.0, -3.5, 0.15);
       this->SetVisibility(1.0);
-      ROS_INFO("Marker displayed at pickup zone");
+      ROS_INFO("Marker displayed at drop off zone");
     }
     pub_.publish(marker);
   }
@@ -86,7 +86,7 @@ private:
   ros::Subscriber sub_status;
 
   //Function to change visibility of marker
-  void SetVisibility(float a){
+  void SetVisibility(double a){
      marker.color.a = a;
   }
 
