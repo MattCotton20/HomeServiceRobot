@@ -16,7 +16,7 @@ xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_g
 sleep 5
 
 # Run view_navigation.launch
-xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_rviz_launchers view_navigation.launch" &
+xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; rosrun rviz rviz -d src/rvizConfig/home_service.rviz" &
 sleep 5
 
 # Run add_markers node
