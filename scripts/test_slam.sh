@@ -10,7 +10,7 @@ export ROBOT_INITIAL_POSE="-x 0 -y 0 -Y 1.5707"
 xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_gazebo turtlebot_world.launch" &
 sleep 5
 
-# Run mapping_demo.launch
+# Run gmapping_demo.launch
 xterm  -e  "cd ${path_catkin_ws}; source devel/setup.bash; roslaunch turtlebot_gazebo gmapping_demo.launch" & 
 sleep 5
 
