@@ -26,19 +26,19 @@ $ cd ~/catkin_ws/
 $ catkin_make
 ```
 
-#### Manually test SLAM:
+#### Map the environment using SLAM:
 ```
 $ cd ~/catkin_ws/src/scripts
 $ ./test_amcl.sh
 ```
 Use the `keyboard_teleop` terminal to manually control the Turtlebot. The mapping process can be seen in the RViz window.
 
-#### Navigate automatically using AMCL:
+#### Automatically navigate using path planning and AMCL localization:
 ```
 $ cd ~/catkin_ws/src/scripts
 $ ./test_navigation.sh
 ```
-Within RViz, use the 2D Nav Goal button to send position commands to the Turtlebot. The AMCL particle swarm can be seen as the robot localizes itself.
+Within RViz, use the 2D Nav Goal button to send position commands to the Turtlebot. The AMCL particle swarm can be seen as the robot localizes itself against the previously-created map.
 
 #### Pick up and drop off a virtual object:
 ```
