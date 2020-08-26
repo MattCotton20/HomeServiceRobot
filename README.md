@@ -14,6 +14,10 @@ This project uses the following ROS packages:
 * turtlebot_rviz_launchers: Loads a preconfigured RViz workspace to visualise the Turtlebot mapping and/or localizing within its environment.
 * ROS Navigation Stack: Performs path planning and navigation to navigate the Turtlebot around obstacles to reach a goal position.
 
+I have also created two ROS packages for this project:
+* pick_objects: Sends a navigation goal to the Turtlebot to navigate to a pre-defined 'pick up zone', wait 5 seconds to imitate an object being picked up, then drive to a 'drop off zone' and wait a further 5 seconds to simulate dropping the object off. This node also publishes a message to an `/object_status` topic when each event occurs.
+* add_markers: Listens for `/object_status` messages and in response, publishes a message on the `/visualization_marker` topic to tell RViz to display/hide a 'virtual' green sphere imitating the object.
+
 ## Getting Started
 #### Clone repo into catkin workspace:
 ```
@@ -42,6 +46,10 @@ $ cd ~/catkin_ws/src/scripts
 $ ./home_service.sh
 ```
 The Turtlebot will automatically navigate to a virtual object (seen as a green sphere in RViz), pick it up, drive to another location and drop the object off.
+
+## Acknowledgements
+* ROS Wiki: Providing a template code snippet for generating and publishing Markers to RViz.
+http://wiki.ros.org/rviz/Tutorials/Markers%3A%20Basic%20Shapes
 
 ## Author
 
